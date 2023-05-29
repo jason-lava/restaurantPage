@@ -1,1 +1,3 @@
-console.log("I\'m here, check me out, i\'m a print statement in JS");
+import '/.home.js';
+
+console.log("I\'m here, check-a me out, i\'m a print statement in JS");
