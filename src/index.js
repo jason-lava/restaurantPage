@@ -1,3 +1,6 @@
-import '/.home.js';
+import './home.js';
+import './menu.js';
+import './contact.js';
 
-console.log("I\'m here, check-a me out, i\'m a print statement in JS");
+console.log("index.js is linked");
+
