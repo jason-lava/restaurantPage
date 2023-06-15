@@ -1,7 +1,3 @@
-// import './home.js';
-// import './menu.js';
-// import './contact.js';
-
 // create title and top menu tabs
 
 function createTitleAndTabs(tab) {
