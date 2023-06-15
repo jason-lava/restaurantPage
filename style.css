@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --background-color: black;
+    --font-color: black;
+    --border-color: #555;
+    --button-background-color: #4c5c68;
+    --button-hover-background: #3b4b57;
+    --button-active-background: #2a3a46;
+    --font: 'Sans-serif', Arial;
+    --font-title: 'Cursive', 'Lucida Handwriting';
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font);
+    font: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black black;
+    margin: 0;
+    background-color: color-mix(in srgb, slategray, black);
+    background-image: url('./images/pizzaOven.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title,
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--background-color);
+    opacity: 75%;
+    width: 100vw;
+}
+
+.title {
+    font: var(--font-title);
+    font-size: 75px;
+    height: 125px;
+    padding-top: 10px;
+}
+
+.tabs {
+    height: 75px;
+}
+
+.home,
+.menu,
+.contact {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 36px;
+}
+
+.home:hover,
+.menu:hover,
+.contact:hover {
+    cursor: pointer;
+    transform: translateY(-20%);
+    transition-duration: 500ms;
+}
+
+.home.active,
+.menu.active,
+.contact.active {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+}
+
+.homeContent,
+.contactContent {
+    background-color: var(--background-color);
+    opacity: 90%;
+    margin-top: 50px;
+    color: white;
+    border: 1px solid var(--border-color);
+    animation: fadeIn 1.5s;
+}
+
+.homeContent,
+.contactContent {
+    height: 800px;
+    width: 800px;
+    font-size: 26px;
+}
+
+.homeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topText,
+.upperText,
+.middleText,
+.lowerText,
+.pizzaChef,
+.bottomText {
+    margin-top: 20px;
+}
+
+.pizzaChef img {
+    height: 500px;
+    width: 500px;
+    border-radius: 30%;
+}
+
+.bottomText:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.menuContent {
+    height: 1600px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+    margin-top: 50px;
+    color: black;
+    background-color: white;
+    opacity: 90%;
+    border: 1px solid var(--border-color);
+    animation: fadeIn 1.5s;
+}
+
+.cheese,
+.pepperoni,
+.margherita,
+.meat,
+.mushroom,
+.seafood,
+.hawaiian,
+.pepper {
+    width: 300px;
+    align-self: center;
+    justify-self: center;
+    text-transform: capitalize;
+    transition-duration: 0.3s;
+}
+
+.cheese img,
+.pepperoni img,
+.margherita img,
+.meat img,
+.mushroom img,
+.seafood img,
+.hawaiian img,
+.pepper img {
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.cheese:hover,
+.pepperoni:hover,
+.margherita:hover,
+.meat:hover,
+.mushroom:hover,
+.seafood:hover,
+.hawaiian:hover,
+.pepper:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.cheeseItems,
+.pepperoniItems,
+.margheritaItems,
+.meatItems,
+.mushroomItems, 
+.seafoodItems,
+.hawaiianItems, 
+.pepperItems {
+    height: 100px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 25px;
+    margin-top: 10px;
+} 
+
+.orderNow {
+    font-size: 24px;
+    margin-bottom: 100px;
+    margin-top: -140px;
+    position: relative;
+    font-weight: bold;
+    color: black;
+
+}
+
+.orderNow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.contactContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone,
+.address,
+.pledge,
+.pledgeAuthor {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.contactContent img {
+    height: 500px;
+    width: auto;
+    padding-top: 20px;
+}
+
+.pledge {
+    margin-left: 18px;
+    font-style: italic;
+}
+
+.pledgeAuthor {
+    font-style: normal;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    color: white;
+    background-color: var(--background-color);
+    opacity: 75%;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
