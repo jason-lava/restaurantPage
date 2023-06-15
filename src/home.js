@@ -1,57 +1,47 @@
-console.log("home.js is linked");
+import { createTitleAndTabs } from './index.js';
 
 // attach to content div to create rest of content via js
 const content = document.getElementById("content");
-console.log(content);
-content.innerHTML = "PIZZA";
 
-// create title and top menu tabs
-const title = document.createElement("div");
-title.classList.add("title");
-title.textContent = "Pizza-legiance";
-content.appendChild(title);
+createTitleAndTabs("home");
 
-const tabs = document.createElement("div");
-tabs.classList.add("tabs");
-content.appendChild(tabs);
+// create homeContent text boxes and image
+const homeContent = document.createElement("div");
+homeContent.classList.add("homeContent");
 
-const home = document.createElement("div");
-const menu = document.createElement("div");
-const contact = document.createElement("div");
+const topText = document.createElement("div");
+const upperText = document.createElement("div");
+const middleText = document.createElement("div");
+const lowerText = document.createElement("div");
 
-home.classList.add("home");
-menu.classList.add("menu");
-contact.classList.add("contact");
+const pizzaChef = document.createElement("div");
+const pizzaImage = document.createElement("img");
 
-home.textContent = "Home";
-menu.textContent = "Menu";
-contact.textContent = "Contact";
+pizzaChef.appendChild(pizzaImage);
 
-tabs.appendChild(home);
-tabs.appendChild(menu);
-tabs.appendChild(contact);
+const bottomText = document.createElement("a");
 
-const homeLink = document.createElement("a");
-const menuLink = document.createElement("a");
-const contactLink = document.createElement("a");
+topText.classList.add("topText")
+upperText.classList.add("upperText")
+middleText.classList.add("middleText")
+lowerText.classList.add("lowerText")
+pizzaChef.classList.add("pizzaChef")
+bottomText.classList.add("bottomText")
 
-homeLink.href = "home.html";
-menuLink.href = "menu.html";
-contactLink.href = "contact.html";
+topText.textContent = "DID YOU KNOW?"
+upperText.textContent = "Pizza was born on March 14, 1592"
+middleText.textContent = "300 years later to the day, we pledged our allegiance to the Pizza"
+lowerText.textContent = "We've been saucin' it up ever since March 14, 1892"
+bottomText.textContent = "Ready to order? Give us a call!"
 
-home.appendChild(homeLink);
-menu.appendChild(menuLink);
-contact.appendChild(contactLink);
+pizzaImage.src = "./images/pizza.jpg";
+bottomText.href = "contact.html";
 
+content.appendChild(homeContent);
 
-
-
-
-
-
-
-
-
-
-
-
+homeContent.appendChild(topText);
+homeContent.appendChild(upperText);
+homeContent.appendChild(middleText);
+homeContent.appendChild(lowerText);
+homeContent.appendChild(pizzaChef);
+homeContent.appendChild(bottomText);
